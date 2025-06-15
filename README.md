@@ -28,8 +28,8 @@ If you don't already have pnpm installed, download it [here](https://pnpm.io/ins
 First, clone the Veil repository to your local machine:
 
 ```sh
-git clone https://github.com/aandrewduong/veil-cli.git
-cd veil-cli
+git clone git@github.com:michaelrgarcia/sawa.git
+cd sawa
 ```
 
 ### 2️⃣ Install Dependencies
