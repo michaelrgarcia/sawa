@@ -1,6 +1,6 @@
-import { context } from "../../context";
-import { loginToSSB } from "../auth";
-import { genSessionId } from "../utils";
+import { context } from "../context";
+import { loginToSSB } from "./auth";
+import { genSessionId } from "./utils";
 
 export async function getTermId(
   page: Awaited<ReturnType<typeof loginToSSB>>["page"]

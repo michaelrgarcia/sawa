@@ -5,10 +5,6 @@ import signup from "./signup";
 import { sleep } from "./utils";
 import { sendNotification } from "./webhook";
 
-// REMEMBER TO CREATE NEW REPO
-// MY USER AND PASSWORD ARE IN THE PRIVATE REPO'S
-// ENV FILE
-
 async function checkEnrollmentData(
   page: Awaited<ReturnType<typeof loginToSSB>>["page"],
   crn: string
@@ -47,8 +43,6 @@ async function checkEnrollmentData(
   const wlCap = parseInt(waitlistCapacity);
   const wlAct = parseInt(waitlistActual);
   const wlAvail = parseInt(waitlistSeatsAvailable);
-
-  console.log(enroll, wlCap, wlAct, wlAvail);
 
   if ((wlCap > wlAct && wlAvail > 0) || (enroll > 0 && wlAvail > 0)) {
     await sendNotification(
