@@ -39,16 +39,16 @@ Run the following command to install all required dependencies:
 pnpm install
 ```
 
-### 3️⃣ Configure `settings.csv`
-Edit the `env` file to match your preferences (see **[Configuration](#configuration)** for details).
+### 3️⃣ Configure `.env`
+Edit the `.env` file to match your preferences (see **[Configuration](#configuration)** for details).
 
 ---
 
 ## Configuration
 
-To function correctly, sawa needs a properly configured **`env`** file.
+To function correctly, sawa needs a properly configured **`.env`** file.
 
-### `env` Parameters
+### `.env` Parameters
 
 | Parameter             | Description                                      | Example Value                              |
 |----------------------|------------------------------------------------|-------------------------------------------|
