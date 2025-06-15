@@ -9,10 +9,8 @@ An alternative to [veil-cli](https://github.com/aandrewduong/veil-cli) that util
 - [Prerequisites](#prerequisites)
 - [Installation & Setup](#installation--setup)
 - [Configuration](#configuration)
-- [Compilation](#compilation)
 - [Usage](#usage)
 - [Modes](#modes)
-- [Example Scenarios](#example-scenarios)
 
 ---
 
