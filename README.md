@@ -58,7 +58,7 @@ To function correctly, sawa needs a properly configured **`.env`** file.
 | `CRNS`              | Course Reference Numbers                      | `47520,44412,41846`                       |
 | `MODE`              | Task type (`Signup` or `Watch`)            | `Signup` 
 | `WATCH_COOLDOWN` | Time between each check (in ms) | `3000`
-| `Webhook`           | Discord Webhook for notifications             | `https://discord.com/api/webhooks/[...]`  |
+| `WEBHOOK_URL`           | Discord Webhook for notifications             | `https://discord.com/api/webhooks/[...]`  |
 
 #### Setting Up a Discord Webhook  
 Follow this guide: [How to Create a Discord Webhook](https://hookdeck.com/webhooks/platforms/how-to-get-started-with-discord-webhooks).
