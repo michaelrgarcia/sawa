@@ -5,6 +5,29 @@ import signup from "./signup";
 import { sleep } from "./utils";
 import { sendNotification } from "./webhook";
 
+if (require.main === module) {
+  const crn = process.argv[2];
+
+  if (!crn) {
+    console.error("no CRN passed to watch.ts");
+    process.exit(1);
+  }
+
+  context.crns = [crn];
+
+  watch().catch(async (err) => {
+    console.error(`[${crn}] failed:`, err);
+    process.exit(1);
+  });
+
+  process.stdin.resume();
+
+  process.on("SIGINT", async () => {
+    console.log(`[${crn}] shutting down...`);
+    process.exit(0);
+  });
+}
+
 async function checkEnrollmentData(
   page: Awaited<ReturnType<typeof loginToSSB>>["page"],
   crn: string

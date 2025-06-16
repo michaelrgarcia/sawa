@@ -1,5 +1,9 @@
+import { fork } from "child_process";
+import { resolve } from "path";
+import { context } from "./context";
 import signup from "./src/signup";
-import { watch } from "./src/watch";
+
+const watchFile = resolve(__dirname, "./src/watch.ts");
 
 async function main() {
   const mode = process.env.MODE!;
@@ -9,7 +13,20 @@ async function main() {
       await signup();
       break;
     case "Watch":
-      await watch();
+      for (const crn of context.crns) {
+        const child = fork(watchFile, [crn], {
+          execPath: "tsx",
+        });
+
+        child.on("exit", (code) => {
+          console.log(`[CRN ${crn}] exited with code ${code}`);
+        });
+
+        child.on("error", (err) => {
+          console.error(`[CRN ${crn}] process error:`, err);
+        });
+      }
+
       break;
   }
 }
