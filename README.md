@@ -23,7 +23,7 @@ If you don't already have pnpm installed, download it [here](https://pnpm.io/ins
 ## Installation & Setup
 
 ### 1️⃣ Clone the Repository
-First, clone the Veil repository to your local machine:
+First, clone the sawa repository to your local machine:
 
 ```sh
 git clone git@github.com:michaelrgarcia/sawa.git
